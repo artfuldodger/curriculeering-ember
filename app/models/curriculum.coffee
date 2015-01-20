@@ -1,9 +1,12 @@
 `import DS from 'ember-data'`
 
+attr = DS.attr
+
 Curriculum = DS.Model.extend {
   instructor: DS.belongsTo('instructor'),
-  title: DS.attr('string'),
-  description: DS.attr('string')
+  title: attr('string'),
+  description: attr('string'),
+  createdAt: attr('date')
 }
 
 `export default Curriculum`

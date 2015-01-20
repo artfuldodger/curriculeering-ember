@@ -1,5 +1,9 @@
 <h2>{{title}}</h2>
-<strong>by {{instructor.fullName}}</strong>
+
+<strong>
+  by {{instructor.fullName}},
+  <span class="muted">{{format-date createdAt}}</span>
+</strong>
 
 <div class="description">
   {{description}}
