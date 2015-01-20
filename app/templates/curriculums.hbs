@@ -3,7 +3,7 @@
 <ul class="list-unstyled">
   {{#each}}
     <li>
-      {{title}}
+      {{#link-to 'curriculum' this}}{{title}}{{/link-to}}
     </li>
   {{/each}}
 </ul>

@@ -8,5 +8,6 @@ Router = Ember.Router.extend(
 Router.map ->
   @route 'about'
   @resource 'curriculums'
+  @route 'curriculum', path: 'curriculums/:curriculum_id'
 
 `export default Router;`
