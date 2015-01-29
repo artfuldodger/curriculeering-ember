@@ -1,19 +1,36 @@
-{{#if isEditing}}
-  {{partial 'curriculum/edit'}}
-  <button {{action 'doneEditing'}}>Done</button>
-{{else}}
-  <button {{action 'edit'}}>Edit</button>
-{{/if}}
+<div class="curriculum">
+  <div class="actions">
+    {{#if isEditing}}
+      <button {{action 'doneEditing'}} class="btn btn-primary">Done</button>
 
-<h2>{{title}}</h2>
+      <a href="#" {{action 'cancelEditing'}}>Cancel</a>
+    {{else}}
+      <button {{action 'edit'}} class="btn btn-primary">Edit</button>
+    {{/if}}
+  </div>
 
-<strong>
-  by {{instructor.fullName}},
-  <span class="muted">{{format-date createdAt}}</span>
-</strong>
+  {{#if isEditing}}
+    <div>
+      {{input type="text" value=title}}
+    </div>
+  {{else}}
+    <h2>{{title}}</h2>
+  {{/if}}
 
-<div class="description">
-  {{format-markdown description}}
+  <strong>
+    by {{instructor.fullName}},
+    <span class="muted">{{format-date createdAt}}</span>
+  </strong>
+
+  <div class="description">
+    {{#if isEditing}}
+      <div>
+        {{textarea value=description}}
+      </div>
+      <h3>Preview:</h3>
+    {{/if}}
+    {{format-markdown description}}
+  </div>
+
+  {{outlet}}
 </div>
-
-{{outlet}}

@@ -9,6 +9,10 @@ CurriculumController = {
     doneEditing: ->
       @set('isEditing', false)
       @model.save()
+
+    cancelEditing: ->
+      @model.rollback()
+      @set('isEditing', false)
   }
 }
 
