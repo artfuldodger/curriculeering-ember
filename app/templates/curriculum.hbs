@@ -33,4 +33,12 @@
   </div>
 
   {{outlet}}
+
+  <div class="lessons">
+    <h3>Lessons</h3>
+    {{#each lessons}}
+      Title: {{title}}
+      Description: {{description}}
+    {{/each}}
+  </div>
 </div>
