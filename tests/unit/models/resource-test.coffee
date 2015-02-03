@@ -1,8 +1,8 @@
 `import { test, moduleForModel } from 'ember-qunit'`
 
-moduleForModel 'curriculum', 'Curriculum', {
+moduleForModel 'resource', 'Resource', {
   # Specify the other units that are required for this test.
-  needs: ['model:instructor', 'model:lesson', 'model:resource']
+  needs: ['model:lesson', 'model:curriculum']
 }
 
 test 'it exists', ->

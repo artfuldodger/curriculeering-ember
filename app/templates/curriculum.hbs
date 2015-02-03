@@ -37,8 +37,11 @@
   <div class="lessons">
     <h3>Lessons</h3>
     {{#each lessons}}
-      Title: {{title}}
-      Description: {{description}}
+      <h4>
+        {{#link-to 'lesson' this}}
+          {{title}}
+        {{/link-to}}
+      </h4>
     {{/each}}
   </div>
 </div>

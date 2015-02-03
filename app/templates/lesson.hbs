@@ -1,0 +1,12 @@
+<h1>{{title}}</h1>
+
+<ul>
+  {{#each resources}}
+    <li>
+      <a {{bind-attr href=url}} target="_blank">{{title}}</a>
+      {{description}}
+    </li>
+  {{/each}}
+</ul>
+
+{{outlet}}

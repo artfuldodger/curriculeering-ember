@@ -4,7 +4,7 @@ attr = DS.attr
 
 Lesson = DS.Model.extend {
   curriculum: DS.belongsTo('curriculum'),
-  # assignments: DS.hasMany('assignment', async: true)
+  resources: DS.hasMany('resource'),
   title: attr('string'),
   description: attr('string'),
   notes: attr('string')

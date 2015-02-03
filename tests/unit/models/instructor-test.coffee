@@ -2,7 +2,7 @@
 
 moduleForModel 'instructor', 'Instructor', {
   # Specify the other units that are required for this test.
-  needs: ['model:curriculum']
+  needs: ['model:curriculum', 'model:lesson', 'model:curriculum']
 }
 
 test 'it exists', ->
