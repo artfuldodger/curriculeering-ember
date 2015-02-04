@@ -32,9 +32,9 @@
     {{format-markdown description}}
   </div>
 
-  {{outlet}}
+  <hr>
 
-  <div class="lessons">
+  <div class="lessons col-md-4">
     <h3>Lessons</h3>
     {{#each lessons}}
       <h4>
@@ -43,5 +43,9 @@
         {{/link-to}}
       </h4>
     {{/each}}
+  </div>
+
+  <div class="col-md-8">
+    {{outlet}}
   </div>
 </div>
