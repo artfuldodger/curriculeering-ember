@@ -36,10 +36,10 @@
 
   <div class="lessons col-md-4">
     <h3>Lessons</h3>
-    {{#each lessons}}
+    {{#each lesson in lessons}}
       <h4>
-        {{#link-to 'lesson' this}}
-          {{title}}
+        {{#link-to 'lesson' lesson}}
+          {{lesson.title}}
         {{/link-to}}
       </h4>
     {{/each}}

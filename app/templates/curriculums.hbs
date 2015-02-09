@@ -2,12 +2,12 @@
   <h3>Curriculums</h3>
 
   <ul class="list-unstyled">
-    {{#each}}
+    {{#each curriculum in model}}
       <li>
-        {{#link-to 'curriculum' this}}
-          {{title}}
+        {{#link-to 'curriculum' curriculum}}
+          {{curriculum.title}}
           <span class="muted">
-            by {{instructor.fullName}}
+            by {{curriculum.instructor.fullName}}
           </span>
         {{/link-to}}
       </li>

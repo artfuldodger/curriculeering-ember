@@ -4,10 +4,10 @@
 
 <h2>Resources</h2>
 <ul>
-  {{#each resources}}
+  {{#each resource in resources}}
     <li>
-      <a {{bind-attr href=url}} target="_blank">{{title}}</a>
-      {{description}}
+      <a {{bind-attr href=resource.url}} target="_blank">{{resource.title}}</a>
+      {{resource.description}}
     </li>
   {{/each}}
 </ul>
