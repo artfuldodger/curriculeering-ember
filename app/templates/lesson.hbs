@@ -5,10 +5,7 @@
 <h2>Resources</h2>
 <ul>
   {{#each resource in resources}}
-    <li>
-      <a {{bind-attr href=resource.url}} target="_blank">{{resource.title}}</a>
-      {{resource.description}}
-    </li>
+    {{resource-list-item resource=resource}}
   {{/each}}
 </ul>
 
