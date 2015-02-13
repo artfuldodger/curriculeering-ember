@@ -1,0 +1,7 @@
+{{#if isEditing}}
+  <div>
+    {{input type="text" value=value}} <a href="#" {{action 'doneEditing'}}>Save</a>
+  </div>
+{{else}}
+  <h2 {{action 'edit'}}>{{value}}</h2>
+{{/if}}

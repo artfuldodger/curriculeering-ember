@@ -1,0 +1,11 @@
+{{#if isEditing}}
+  <div>
+    {{textarea value=value}}
+    <a href="#" {{action 'doneEditing'}}>Save</a>
+  </div>
+  <h3>Preview:</h3>
+{{/if}}
+
+<div {{action 'edit'}}>
+  {{format-markdown value}}
+</div>

@@ -1,21 +1,5 @@
 <div class="curriculum">
-  <div class="actions">
-    {{#if isEditing}}
-      <button {{action 'doneEditing'}} class="btn btn-primary">Done</button>
-
-      <a href="#" {{action 'cancelEditing'}}>Cancel</a>
-    {{else}}
-      <button {{action 'edit'}} class="btn btn-primary">Edit</button>
-    {{/if}}
-  </div>
-
-  {{#if isEditing}}
-    <div>
-      {{input type="text" value=title}}
-    </div>
-  {{else}}
-    <h2>{{title}}</h2>
-  {{/if}}
+  {{editable-text-value value=title action='save'}}
 
   <strong>
     by {{instructor.fullName}},
@@ -23,13 +7,7 @@
   </strong>
 
   <div class="description">
-    {{#if isEditing}}
-      <div>
-        {{textarea value=description}}
-      </div>
-      <h3>Preview:</h3>
-    {{/if}}
-    {{format-markdown description}}
+    {{editable-markdown value=description action='save'}}
   </div>
 
   <hr>

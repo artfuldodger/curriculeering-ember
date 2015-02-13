@@ -3,16 +3,8 @@
 CurriculumController = {
   isEditing: false,
   actions: {
-    edit: ->
-      @set('isEditing', true)
-
-    doneEditing: ->
-      @set('isEditing', false)
+    save: ->
       @model.save()
-
-    cancelEditing: ->
-      @model.rollback()
-      @set('isEditing', false)
   }
 }
 
