@@ -1,13 +1,5 @@
-`import Ember from 'ember'`
+`import BaseEditableComponent from './base-editable-component'`
 
-EditableMarkdownComponent = Ember.Component.extend(
-  actions:
-    edit: ->
-      @set('isEditing', true)
-
-    doneEditing: ->
-      @set('isEditing', false)
-      @sendAction()
-)
+EditableMarkdownComponent = BaseEditableComponent.extend()
 
 `export default EditableMarkdownComponent`
