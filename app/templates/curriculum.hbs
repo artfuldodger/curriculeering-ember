@@ -13,7 +13,10 @@
   <hr>
 
   <div class="lessons col-md-4">
-    <h3>Lessons</h3>
+    <h3>
+      Lessons
+      <a href="#" class="btn btn-primary" {{action 'createLesson'}}>+</a>
+    </h3>
     {{#each lesson in lessons}}
       <h4>
         {{#link-to 'lesson' lesson}}
