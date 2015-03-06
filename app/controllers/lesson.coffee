@@ -1,10 +1,10 @@
 `import Ember from "ember";`
 
-CurriculumController = {
+LessonController = {
   actions: {
     save: ->
       @model.save()
   }
 }
 
-`export default Ember.ObjectController.extend(CurriculumController);`
+`export default Ember.ObjectController.extend(LessonController);`
