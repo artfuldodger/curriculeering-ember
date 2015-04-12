@@ -2,7 +2,10 @@
 
 {{editable-markdown value=description action='save'}}
 
-<h2>Resources</h2>
+<h2>
+  Resources
+  <a href="#" class="btn btn-primary" {{action 'createResource'}}>+</a>
+</h2>
 <ul>
   {{#each resource in resources}}
     {{resource-list-item resource=resource}}
